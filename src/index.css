@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+/* ===== Premium Continuous Animations ===== */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes ringGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(168,85,247,0.25);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(168,85,247,0.45);
+  }
+}
+
+/* Classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 8s ease-in-out infinite;
+}
+
+.animate-ring {
+  animation: ringGlow 5s ease-in-out infinite;
+}
